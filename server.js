@@ -13,6 +13,7 @@ function getInstance(commit) {
 
 
 function run(commit, instance) {
+  console.log("Starting HTTP server on port 80...");
   http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/plain'});
     res.write(`Instance ID: ${instance}\nCurrently running commit ${commit}`);
